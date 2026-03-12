@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+h1{
+   font-family: "DynaPuff", system-ui;
+}
+button{
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    color: #faf2dd;
+    background-color: #ac6959;
+    padding: 10px;
+}
+button:hover{
+    color: #faf2dd;
+    background-color: #e79476;
+}

@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth{
+    max-width: 500px;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 14px rgb(0, 0, 0.521);
+}
+
+h2{
+    font-family: "DynaPuff", system-ui;
+}
+input{
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border-color: #e79476;
+}
+button{
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    color: #faf2dd;
+    background-color: #ac6959;
+    padding: 4px;
+}
+button:hover{
+    color: #faf2dd;
+    background-color: #e79476;
+}
