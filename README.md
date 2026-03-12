@@ -21,8 +21,12 @@ Principais componentes:
 - Auth → Responsável por login e cadastro
 - Home → Tela exibida após login do usuário
 
-## ▶️ Como Executar o Projeto?
+## 🚀 Demonstração
 
+#### Tela de Login
+![TelaDeLogin](TelaLoginCadastro/public/Captura%20de%20tela%20de%202026-03-12%2011-06-09.png)
+
+## ▶️ Como Executar o Projeto?
 #### 1️⃣ Clone o repositório
 ```bash
 git clone https://github.com/Franklin-Barbosa/TelaLoginCadastro
