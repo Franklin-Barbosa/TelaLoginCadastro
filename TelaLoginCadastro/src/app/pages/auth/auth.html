@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="auth-container">
+        <h2>{{ isLoginMode ? 'Login' : 'Cadastro' }}</h2>
+
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+            <div *ngIf="!isLoginMode">
+                <label for="name">Nome :</label>
+                <input id="name" formControlName="name">
+            </div>
+
+            <label for="email">Email :</label>
+            <input id="email" type="email" formControlName="email">
+
+            <label for="password">Senha :</label>
+            <input id="password" type="password" formControlName="password" [placeholder]="isLoginMode ? '' : 'Informe pelo menos 6 digitos' ">
+
+            <button type="submit">{{ isLoginMode ? 'Entrar' : 'Cadastrar' }}</button>
+
+        </form>
+
+        <p>
+            {{ isLoginMode ? 'Não tem conta?' : 'Já tem conta?' }}
+            <button (click)="toggleMode()">{{ isLoginMode ? 'Criar conta' : 'Fazer login' }}</button>
+        </p>
+    </div>
+</body>
+</html>
