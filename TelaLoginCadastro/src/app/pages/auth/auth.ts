@@ -29,6 +29,7 @@ export class Auth implements OnInit {
     this.setupForm();
   }
 
+  // criar formulário
   setupForm():void{
     this.form = this.fb.group({
       name:[''],
@@ -36,14 +37,16 @@ export class Auth implements OnInit {
       password:['', [Validators.required, Validators.minLength(6)]]
     })
   }
+  // alternar entre login e cadastro
   toggleMode(): void{
     this.isLoginMode = !this.isLoginMode;
   }
-  // salvar no local storage
+  // pegar usuários no localStorage
   getUsuarios(): Usuario[]{
     const dados = localStorage.getItem('usuarios');
     return dados? JSON.parse(dados) : [];
   }
+  // salvar usuários como lista
   salvarUsuarios(lista: Usuario[]): void{
     localStorage.setItem('usuarios', JSON.stringify(lista))
   }
@@ -58,6 +61,7 @@ export class Auth implements OnInit {
     const{name, email, password} = this.form.value;
     const usuarios = this.getUsuarios();
 
+    // logica de login e cadastro
     if(this.isLoginMode){
       const usuario = usuarios.find(u => u.email === email && u.password === password);
       if(usuario){
@@ -74,6 +78,7 @@ export class Auth implements OnInit {
         return;
       }
 
+      // criar novo usuário
       const novoUsuario : Usuario = {name, email, password};
       usuarios.push(novoUsuario);
       this.salvarUsuarios(usuarios);

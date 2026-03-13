@@ -9,11 +9,12 @@ import { Router } from '@angular/router';
 })
 export class Home {
 
+  // rota para redirecionar página
   constructor(private router: Router){}
 
   logout(): void{
-    localStorage.removeItem('usuarioLogado');
-    this.router.navigate(['/']);
+    localStorage.removeItem('usuarioLogado');  // remover do localStorage usuário logado
+    this.router.navigate(['/']);  // redirecionar para a página de login
   }
 
 }
